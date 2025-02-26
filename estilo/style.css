@@ -43,8 +43,8 @@ section{
     position: relative;
 
     & .list{
-        width: 70vw;
-        height: 100%;
+        width: 65vw;
+        height: 80%;
         margin: auto;
         position:relative;
 
@@ -59,16 +59,16 @@ section{
             width: 70%;
 
             & img{
-                width: 100%;
-                transform: rotate(0%);
+                width: 90%;
+                transform: rotate(0deg);
             }
            } 
 
            & .content {
             position: absolute;
-            right: 100px;
+            right: 30px;
             width: 30%;
-            height: 78%;
+            height: 87%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -113,7 +113,7 @@ section{
     .arrows {
         width: 70vw;
         position: absolute;
-        top: 40%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -25px);
         display: flex;
@@ -126,16 +126,16 @@ section{
         }
 
         & button{
-            top: 40%;
+            top: 30%;
             width: 50px;
             height: 50px;
-            border-radius: 50%;
+            border-radius: 60%;
             border: none;
             cursor: pointer;
 
             & img{
                 width: 30px;
-                margin-top: 4px;
+                margin-top: 5px;
                 cursor: progress;
             }
 
@@ -149,7 +149,7 @@ section{
 
     .indicators {
         position: absolute;
-        top: 35%;
+        top: 30%;
         left: 50%;
         transform: translateX(-50%);
         height: 200px;
@@ -177,5 +177,65 @@ section{
             background-color: #fff;
             
         }
+    }
+}
+
+section{
+    & .list{
+
+        & .item{
+            transform: translateX(0vw);
+            transition: 0,5s;
+            
+            & .pc-img{
+                & img{
+                    transform: rotate(0);
+                    transition: 0,5s;
+                    transition-delay: 0,3s;
+                }
+
+            }
+        }
+
+        & .content{
+            & .Pc-information, h2, .description, .infomation{
+                transform: translateX(200px);
+                transition: 0,07s;
+                transition-delay: 0,3s;
+            }
+            & h2{
+                transition: 0,5s;
+            }
+            & .description{
+                transition: 0,7s;
+            }
+            & .infomation{
+                transition: 0,9s;
+            }
+        }
+
+        & .active{
+            transform: translateX(0);
+            transition: 0,5s;
+            opacity: 1;
+
+            & .content{
+                & .Pc-information, h2, .description, .infomation{
+                    transform: translateX(200px);
+                    transition: 0,07s;
+                    transition-delay: 0,3s;
+                }
+
+                & .pc-img{
+                    & img{
+                        transform: rotate(0);
+                        transition: 0,5s;
+                        transition-delay: 0,3s;
+                    }
+    
+                }
+        }
+        
+    }
     }
 }
