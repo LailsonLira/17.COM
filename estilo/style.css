@@ -182,21 +182,17 @@ section{
 
 section{
     & .list{
-
         & .item{
             transform: translateX(0vw);
-            transition: 0,5s;
-            
+            transition: 0,5s;            
             & .pc-img{
                 & img{
                     transform: rotate(0);
                     transition: 0,5s;
                     transition-delay: 0,3s;
                 }
-
             }
         }
-
         & .content{
             & .Pc-information, h2, .description, .infomation{
                 transform: translateX(200px);
@@ -213,29 +209,21 @@ section{
                 transition: 0,9s;
             }
         }
-
         & .active{
             transform: translateX(0);
             transition: 0,5s;
             opacity: 1;
-
-            & .content{
-                & .Pc-information, h2, .description, .infomation{
-                    transform: translateX(200px);
-                    transition: 0,07s;
-                    transition-delay: 0,3s;
+            & .pc-img{
+                & img{
+                    transform: rotate(0deg);
                 }
-
-                & .pc-img{
-                    & img{
-                        transform: rotate(0);
-                        transition: 0,5s;
-                        transition-delay: 0,3s;
-                    }
-    
-                }
+            }
         }
-        
-    }
+        & .content{
+
+            & .Pc-information, h2, .description, .infomation{
+                transform: translateX(0);
+            }
+        }
     }
 }

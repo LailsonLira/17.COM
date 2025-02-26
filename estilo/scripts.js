@@ -2,8 +2,8 @@ let prevButton = document.getElementById('prev')
 let nextButton = document.getElementById('next')
 let container = document.querySelector('.container')
 let items = container.querySelectorAll('.list .item')
-let indicators = document.querySelector('.indicators')
-let dots = indicators.querySelectorAll('ul li')
+let indicator = document.querySelector('.indicators')
+let dots = indicator.querySelectorAll('ul li')
 
 let active = 0
 let fristPosition = 0
@@ -16,12 +16,16 @@ nextButton.onclick = () => {
 
     active = active + 1 > lastPosition ? 0 : active + 1
     items[active].classList.add('active')
+
+    let dotsOld = indicator.querySelector("ul li.active")
+    dotsOld.classList.remove('active')
+    dotsOld[active].classList.add('active')
 }
 
 prevButton.onclick = () => {
     let itemOld = container.querySelector('.list .item.active')
     itemOld.classList.remove('active')
 
-    active = active - 1 < fristPosition ? lastPosition : active -1
+    active = active - 1 < fristPosition ? lastPosition : active - 1
     items[active].classList.add('active')
 }
