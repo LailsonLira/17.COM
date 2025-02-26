@@ -215,7 +215,7 @@ section{
             opacity: 1;
             & .pc-img{
                 & img{
-                    transform: rotate(0deg);
+                    transform: rotate(2deg);
                 }
             }
         }
